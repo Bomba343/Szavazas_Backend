@@ -133,7 +133,7 @@ app.post('/belepes', async (req, res) => {
                 JWT_SECRET,
                 { expiresIn: JWT_EXPIRES_IN }
             )
-            res.cookies(COOKIE_NAME, token, COOKIE_OPTS)
+            res.cookie(COOKIE_NAME, token, COOKIE_OPTS)
             res.status(200).json({ message: "Sikeres Belépés" })
         }
 
